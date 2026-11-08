@@ -3,111 +3,684 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registrasi Event GSA 2026 Batch 2 - Universitas Mercu Buana</title>
+
+  <title>
+    Gemini AI Campus Workshop | Google Student Ambassador 2026
+  </title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
+    /* =========================================================
+       STYLE UTAMA
+    ========================================================= */
+
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #050B18;
       color: #F8FAFC;
-      background-image: 
-        radial-gradient(circle at 15% 15%, rgba(66, 133, 244, 0.16) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(52, 168, 83, 0.1) 0%, transparent 40%);
+
+      background-image:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(66, 133, 244, 0.16) 0%,
+          transparent 40%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(52, 168, 83, 0.10) 0%,
+          transparent 40%
+        );
     }
+
+    /* Garis warna khas Google */
+    .google-stripe {
+      height: 4px;
+      background: linear-gradient(
+        90deg,
+        #4285F4 25%,
+        #EA4335 25%,
+        #EA4335 50%,
+        #FBBC05 50%,
+        #FBBC05 75%,
+        #34A853 75%
+      );
+    }
+
+    /* Card transparan */
     .glass-card {
       background: rgba(10, 19, 41, 0.85);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.10);
     }
+
+    /* Input formulir */
     .input-navy {
-      background: rgba(15, 26, 54, 0.9);
+      background: rgba(15, 26, 54, 0.90);
       border: 1px solid rgba(148, 163, 184, 0.25);
       color: #F8FAFC;
       transition: all 0.2s ease;
     }
+
     .input-navy:focus {
       outline: none;
       border-color: #4285F4;
       box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.25);
     }
-    .google-stripe {
-      height: 4px;
-      background: linear-gradient(90deg, #4285F4 25%, #EA4335 25%, #EA4335 50%, #FBBC05 50%, #FBBC05 75%, #34A853 75%);
+
+    /* Foto Google Student Ambassador */
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(66, 133, 244, 0.70);
+      box-shadow: 0 0 30px rgba(66, 133, 244, 0.25);
+    }
+
+    /* Logo GSA */
+    .gsa-logo {
+      max-width: 180px;
+      max-height: 110px;
+      object-fit: contain;
     }
   </style>
 </head>
+
+
 <body class="min-h-screen flex flex-col justify-between">
 
-  <!-- Top Accent -->
+  <!-- =======================================================
+       GARIS WARNA GOOGLE
+  ======================================================== -->
+
   <div class="google-stripe w-full fixed top-0 z-50"></div>
 
-  <!-- Main Container -->
+
+  <!-- =======================================================
+       KONTEN UTAMA
+  ======================================================== -->
+
   <main class="max-w-3xl w-full mx-auto px-4 pt-12 pb-16">
-    
-    <!-- Header Event -->
+
+
+    <!-- =====================================================
+         HEADER EVENT
+    ====================================================== -->
+
     <div class="text-center mb-8">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/30 text-blue-300 text-xs font-semibold tracking-wide uppercase mb-4">
+
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full
+        bg-blue-500/10 border border-blue-400/30 text-blue-300
+        text-xs font-semibold tracking-wide uppercase mb-5"
+      >
         <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+
         Google Student Ambassador 2026 Batch 2
       </div>
-      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white mb-2">
-        Gemini AI Campus Workshop
-      </h1>
-      <p class="text-slate-300 text-sm md:text-base font-medium">
-        Universitas Mercu Buana • Eksplorasi Produktivitas Akademik, Riset & Karir
-      </p>
-    </div>
 
-    <!-- FORM PENDAFTARAN PUBLIK -->
-    <div id="formContainer" class="glass-card rounded-2xl p-6 md:p-8 shadow-2xl">
-      <div class="border-b border-slate-800 pb-4 mb-6 flex flex-wrap items-center justify-between gap-2">
-        <div>
-          <h2 class="text-lg font-bold text-white">Formulir Registrasi Peserta</h2>
-          <p class="text-xs text-slate-400">Pastikan data sesuai untuk pencetakan e-sertifikat resmi.</p>
+
+      <!-- ===================================================
+           PROFIL AMBASSADOR DAN LOGO GSA
+      ==================================================== -->
+
+      <div class="glass-card rounded-3xl p-6 md:p-8 mb-6">
+
+        <div
+          class="flex flex-col md:flex-row
+          items-center justify-center gap-8"
+        >
+
+          <!-- FOTO PROFIL -->
+          <div class="text-center">
+
+            <!--
+              GANTI FILE FOTO DENGAN:
+              foto-saya.jpg
+
+              Pastikan foto berada di folder yang sama
+              dengan file index.html
+            -->
+
+            <img
+              src="foto-saya.jpg"
+              alt="Tubagus Muhamad Alpin - Google Student Ambassador"
+              class="profile-photo mx-auto mb-4"
+            />
+
+            <h2 class="text-xl font-bold text-white">
+              Tubagus Muhamad Alpin
+            </h2>
+
+            <p class="text-sm text-blue-300 mt-1">
+              Google Student Ambassador 2026
+            </p>
+
+            <p class="text-xs text-slate-400 mt-1">
+              Universitas Mercu Buana
+            </p>
+
+          </div>
+
+
+          <!-- Garis Pembatas Desktop -->
+          <div class="hidden md:block w-px h-36 bg-slate-700"></div>
+
+
+          <!-- LOGO GSA -->
+          <div class="text-center">
+
+            <!--
+              GANTI FILE LOGO DENGAN:
+              logo-gsa.png
+
+              Pastikan logo berada di folder yang sama
+              dengan file index.html
+            -->
+
+            <img
+              src="logo-gsa.png"
+              alt="Google Student Ambassador"
+              class="gsa-logo mx-auto mb-4"
+            />
+
+            <p class="text-sm text-slate-300 max-w-xs mx-auto leading-relaxed">
+              Bersama membangun ekosistem kampus yang lebih kreatif,
+              inovatif, dan bertanggung jawab dengan teknologi Google AI.
+            </p>
+
+          </div>
+
         </div>
-        <span class="text-xs px-2.5 py-1 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-medium">
-          ● Kuota Tersedia
-        </span>
+
       </div>
 
-      <form id="registrationForm" class="space-y-5">
-        <!-- Nama Lengkap -->
+
+      <!-- JUDUL EVENT -->
+
+      <h1
+        class="text-3xl md:text-4xl font-extrabold
+        tracking-tight text-white mb-3"
+      >
+        Gemini AI Campus Workshop
+      </h1>
+
+      <p
+        class="text-slate-300 text-sm md:text-base
+        font-medium max-w-2xl mx-auto leading-relaxed"
+      >
+        Universitas Mercu Buana • Eksplorasi Produktivitas Akademik,
+        Riset & Karier dengan Google AI
+      </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TENTANG GOOGLE STUDENT AMBASSADOR
+    ====================================================== -->
+
+    <section class="glass-card rounded-2xl p-6 md:p-8 mb-6">
+
+      <!-- Judul Section -->
+
+      <div class="flex items-center gap-3 mb-4">
+
+        <div
+          class="w-10 h-10 rounded-xl
+          bg-blue-500/15 border border-blue-400/30
+          flex items-center justify-center text-xl"
+        >
+          ✨
+        </div>
+
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-            Nama Lengkap & Gelar (Jika Ada) <span class="text-red-400">*</span>
+
+          <p
+            class="text-xs text-blue-300
+            font-semibold uppercase tracking-wider"
+          >
+            Tentang Program
+          </p>
+
+          <h2 class="text-xl font-bold text-white">
+            Apa itu Google Student Ambassador?
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <!-- Penjelasan GSA -->
+
+      <p class="text-sm text-slate-300 leading-relaxed">
+
+        Google Student Ambassador merupakan program yang menghadirkan
+        mahasiswa sebagai
+
+        <span class="text-white font-semibold">
+          AI Leader di kampus.
+        </span>
+
+        Melalui program ini, Student Ambassador berperan untuk
+        memperkenalkan, mengedukasi, dan menginspirasi mahasiswa dalam
+        menggunakan Gemini dan teknologi Google AI secara positif,
+        kreatif, dan bertanggung jawab.
+
+      </p>
+
+
+      <!-- Tiga Peran Utama -->
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+
+
+        <!-- Spill Info -->
+
+        <div
+          class="bg-blue-500/10 border border-blue-400/20
+          rounded-xl p-4"
+        >
+
+          <div class="text-xl mb-2">
+            📢
+          </div>
+
+          <h3 class="font-bold text-white text-sm mb-1">
+            Spill Info
+          </h3>
+
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Berbagi informasi, tips, dan insight terbaru
+            seputar Gemini dan Google AI.
+          </p>
+
+        </div>
+
+
+        <!-- Influencer Kampus -->
+
+        <div
+          class="bg-red-500/5 border border-red-400/20
+          rounded-xl p-4"
+        >
+
+          <div class="text-xl mb-2">
+            💡
+          </div>
+
+          <h3 class="font-bold text-white text-sm mb-1">
+            Jadi Influencer Kampus
+          </h3>
+
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Membuat konten kreatif dan relevan untuk mengenalkan
+            pemanfaatan AI kepada mahasiswa.
+          </p>
+
+        </div>
+
+
+        <!-- Pimpin Komunitas -->
+
+        <div
+          class="bg-green-500/5 border border-green-400/20
+          rounded-xl p-4"
+        >
+
+          <div class="text-xl mb-2">
+            🤝
+          </div>
+
+          <h3 class="font-bold text-white text-sm mb-1">
+            Pimpin Komunitas
+          </h3>
+
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Membangun komunitas #TeamGoogle melalui diskusi,
+            sharing session, workshop, dan kegiatan kampus.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INFORMASI EVENT
+    ====================================================== -->
+
+    <section class="glass-card rounded-2xl p-6 md:p-8 mb-6">
+
+
+      <!-- Judul Event -->
+
+      <div class="flex items-center gap-3 mb-5">
+
+        <div
+          class="w-10 h-10 rounded-xl
+          bg-yellow-500/10 border border-yellow-400/30
+          flex items-center justify-center text-xl"
+        >
+          🚀
+        </div>
+
+        <div>
+
+          <p
+            class="text-xs text-yellow-300
+            font-semibold uppercase tracking-wider"
+          >
+            Campus Event
+          </p>
+
+          <h2 class="text-xl font-bold text-white">
+            Apa yang Akan Kita Lakukan?
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <!-- Deskripsi Event -->
+
+      <p class="text-sm text-slate-300 leading-relaxed mb-6">
+
+        <span class="text-white font-semibold">
+          Gemini AI Campus Workshop
+        </span>
+
+        adalah kegiatan interaktif yang dirancang untuk membantu mahasiswa
+        mengenal dan memanfaatkan Gemini serta Google AI dalam kegiatan
+        akademik, riset, pengembangan keterampilan, dan persiapan karier.
+
+      </p>
+
+
+      <!-- Agenda Event -->
+
+      <div class="space-y-4">
+
+
+        <!-- Agenda 1 -->
+
+        <div class="flex gap-3 items-start">
+
+          <div
+            class="w-7 h-7 flex-shrink-0 rounded-lg
+            bg-blue-500/15 text-blue-300
+            flex items-center justify-center
+            text-sm font-bold"
+          >
+            1
+          </div>
+
+          <div>
+
+            <h3 class="text-sm font-bold text-white">
+              Mengenal Gemini & Google AI
+            </h3>
+
+            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+              Memahami teknologi AI dan berbagai potensi penggunaannya
+              dalam kehidupan mahasiswa.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Agenda 2 -->
+
+        <div class="flex gap-3 items-start">
+
+          <div
+            class="w-7 h-7 flex-shrink-0 rounded-lg
+            bg-red-500/10 text-red-300
+            flex items-center justify-center
+            text-sm font-bold"
+          >
+            2
+          </div>
+
+          <div>
+
+            <h3 class="text-sm font-bold text-white">
+              Praktik Prompting yang Efektif
+            </h3>
+
+            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+              Belajar menyusun prompt yang lebih terarah untuk mendapatkan
+              hasil AI yang relevan dan sesuai kebutuhan.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Agenda 3 -->
+
+        <div class="flex gap-3 items-start">
+
+          <div
+            class="w-7 h-7 flex-shrink-0 rounded-lg
+            bg-yellow-500/10 text-yellow-300
+            flex items-center justify-center
+            text-sm font-bold"
+          >
+            3
+          </div>
+
+          <div>
+
+            <h3 class="text-sm font-bold text-white">
+              Eksplorasi untuk Akademik, Riset & Karier
+            </h3>
+
+            <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+              Mengeksplorasi pemanfaatan AI secara kreatif dan
+              bertanggung jawab untuk mendukung produktivitas mahasiswa.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Tagline -->
+
+      <div
+        class="mt-6 pt-5 border-t border-slate-700
+        text-center"
+      >
+
+        <p class="text-lg font-bold text-white">
+          Lead. Innovate. Inspire.
+        </p>
+
+        <p class="text-xs text-blue-300 mt-1">
+          Memimpin, Menginovasi, dan Menginspirasi bersama Google AI.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FORM PENDAFTARAN
+    ====================================================== -->
+
+    <div
+      id="formContainer"
+      class="glass-card rounded-2xl p-6 md:p-8 shadow-2xl"
+    >
+
+
+      <!-- Header Form -->
+
+      <div
+        class="border-b border-slate-800 pb-4 mb-6
+        flex flex-wrap items-center justify-between gap-2"
+      >
+
+        <div>
+
+          <h2 class="text-lg font-bold text-white">
+            Formulir Registrasi Peserta
+          </h2>
+
+          <p class="text-xs text-slate-400">
+            Pastikan data sesuai untuk pencetakan e-sertifikat resmi.
+          </p>
+
+        </div>
+
+        <span
+          class="text-xs px-2.5 py-1 rounded
+          bg-emerald-500/15 text-emerald-300
+          border border-emerald-500/30 font-medium"
+        >
+          ● Kuota Tersedia
+        </span>
+
+      </div>
+
+
+
+      <!-- FORM -->
+
+      <form id="registrationForm" class="space-y-5">
+
+
+        <!-- Nama Lengkap -->
+
+        <div>
+
+          <label
+            class="block text-xs font-semibold uppercase
+            tracking-wider text-slate-300 mb-2"
+          >
+            Nama Lengkap & Gelar (Jika Ada)
+            <span class="text-red-400">*</span>
           </label>
-          <input type="text" id="nama" required placeholder="Contoh: Tubagus Muhamad Alpin"
-            class="input-navy w-full rounded-xl px-4 py-3 text-sm" />
+
+          <input
+            type="text"
+            id="nama"
+            required
+            placeholder="Contoh: Tubagus Muhamad Alpin"
+            class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+          />
+
         </div>
 
-        <!-- NIK & NIM -->
+
+
+        <!-- NIK DAN NIM -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+          <!-- NIK -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              NIK (16 Digit KTP) <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              NIK (16 Digit KTP)
+              <span class="text-red-400">*</span>
             </label>
-            <input type="text" id="nik" required pattern="[0-9]{16}" maxlength="16" placeholder="317xxxxxxxxxxxxx"
+
+            <input
+              type="text"
+              id="nik"
+              required
+              pattern="[0-9]{16}"
+              maxlength="16"
+              placeholder="317xxxxxxxxxxxxx"
               title="Masukkan 16 digit angka NIK"
-              class="input-navy w-full rounded-xl px-4 py-3 text-sm" />
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            />
+
           </div>
+
+
+          <!-- NIM -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              NIM Mahasiswa <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              NIM Mahasiswa
+              <span class="text-red-400">*</span>
             </label>
-            <input type="text" id="nim" required placeholder="Contoh: 4142xxxxxx"
-              class="input-navy w-full rounded-xl px-4 py-3 text-sm" />
+
+            <input
+              type="text"
+              id="nim"
+              required
+              placeholder="Contoh: 4142xxxxxx"
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            />
+
           </div>
+
         </div>
 
-        <!-- Program Studi & Semester -->
+
+
+        <!-- PROGRAM STUDI DAN SEMESTER -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+          <!-- Program Studi -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Program Studi (UMB) <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Program Studi (UMB)
+              <span class="text-red-400">*</span>
             </label>
-            <select id="prodi" required class="input-navy w-full rounded-xl px-4 py-3 text-sm">
-              <option value="" disabled selected>-- Pilih Program Studi --</option>
+
+            <select
+              id="prodi"
+              required
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            >
+
+              <option value="" disabled selected>
+                -- Pilih Program Studi --
+              </option>
+
               <option value="Teknik Elektro">Teknik Elektro</option>
               <option value="Teknik Mesin">Teknik Mesin</option>
               <option value="Teknik Industri">Teknik Industri</option>
@@ -119,16 +692,40 @@
               <option value="Akuntansi">Akuntansi</option>
               <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
               <option value="Psikologi">Psikologi</option>
-              <option value="Desain Komunikasi Visual">Desain Komunikasi Visual (DKV)</option>
-              <option value="Lainnya">Program Studi Lainnya / Umum</option>
+              <option value="Desain Komunikasi Visual">
+                Desain Komunikasi Visual (DKV)
+              </option>
+              <option value="Lainnya">
+                Program Studi Lainnya / Umum
+              </option>
+
             </select>
+
           </div>
+
+
+          <!-- Semester -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Semester Saat Ini <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Semester Saat Ini
+              <span class="text-red-400">*</span>
             </label>
-            <select id="semester" required class="input-navy w-full rounded-xl px-4 py-3 text-sm">
-              <option value="" disabled selected>-- Pilih Semester --</option>
+
+            <select
+              id="semester"
+              required
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            >
+
+              <option value="" disabled selected>
+                -- Pilih Semester --
+              </option>
+
               <option value="Semester 1">Semester 1</option>
               <option value="Semester 2">Semester 2</option>
               <option value="Semester 3">Semester 3</option>
@@ -137,129 +734,406 @@
               <option value="Semester 6">Semester 6</option>
               <option value="Semester 7">Semester 7</option>
               <option value="Semester 8">Semester 8</option>
-              <option value="Fresh Graduate / Alumni">Fresh Graduate / Alumni</option>
+              <option value="Fresh Graduate / Alumni">
+                Fresh Graduate / Alumni
+              </option>
+
             </select>
+
           </div>
+
         </div>
 
-        <!-- Email & WhatsApp -->
+
+
+        <!-- EMAIL DAN WHATSAPP -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+          <!-- Email -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Email Aktif (Utamakan Gmail) <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Email Aktif (Utamakan Gmail)
+              <span class="text-red-400">*</span>
             </label>
-            <input type="email" id="email" required placeholder="nama@gmail.com"
-              class="input-navy w-full rounded-xl px-4 py-3 text-sm" />
+
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="nama@gmail.com"
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            />
+
           </div>
+
+
+          <!-- WhatsApp -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Nomor WhatsApp Aktif <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Nomor WhatsApp Aktif
+              <span class="text-red-400">*</span>
             </label>
-            <input type="tel" id="whatsapp" required placeholder="0812xxxxxxxx"
-              class="input-navy w-full rounded-xl px-4 py-3 text-sm" />
+
+            <input
+              type="tel"
+              id="whatsapp"
+              required
+              placeholder="0812xxxxxxxx"
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            />
+
           </div>
+
         </div>
 
-        <!-- Kategori Kelas & Pengalaman AI -->
+
+
+        <!-- KATEGORI DAN PENGALAMAN AI -->
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+          <!-- Kategori Mahasiswa -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Kategori Mahasiswa <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Kategori Mahasiswa
+              <span class="text-red-400">*</span>
             </label>
-            <select id="kategori" required class="input-navy w-full rounded-xl px-4 py-3 text-sm">
-              <option value="Reguler 1">Mahasiswa Reguler 1</option>
-              <option value="Reguler 2 (Karyawan)">Mahasiswa Reguler 2 (Karyawan)</option>
-              <option value="Umum / Kampus Lain">Umum / Kampus Lain</option>
+
+            <select
+              id="kategori"
+              required
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            >
+
+              <option value="Reguler 1">
+                Mahasiswa Reguler 1
+              </option>
+
+              <option value="Reguler 2 (Karyawan)">
+                Mahasiswa Reguler 2 (Karyawan)
+              </option>
+
+              <option value="Umum / Kampus Lain">
+                Umum / Kampus Lain
+              </option>
+
             </select>
+
           </div>
+
+
+          <!-- Pengalaman Gemini -->
+
           <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-              Pengalaman Pakai Gemini AI <span class="text-red-400">*</span>
+
+            <label
+              class="block text-xs font-semibold uppercase
+              tracking-wider text-slate-300 mb-2"
+            >
+              Pengalaman Pakai Gemini AI
+              <span class="text-red-400">*</span>
             </label>
-            <select id="pengalaman" required class="input-navy w-full rounded-xl px-4 py-3 text-sm">
-              <option value="Belum Pernah">Belum pernah mencoba</option>
-              <option value="Dasar">Sekadar tahu / pakai sesekali</option>
-              <option value="Rutin">Sudah rutin untuk kuliah / kerja</option>
+
+            <select
+              id="pengalaman"
+              required
+              class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+            >
+
+              <option value="Belum Pernah">
+                Belum pernah mencoba
+              </option>
+
+              <option value="Dasar">
+                Sekadar tahu / pakai sesekali
+              </option>
+
+              <option value="Rutin">
+                Sudah rutin untuk kuliah / kerja
+              </option>
+
             </select>
+
           </div>
+
         </div>
 
-        <!-- Alasan / Harapan -->
+
+
+        <!-- HARAPAN PESERTA -->
+
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
-            Harapan atau Topik AI yang Ingin Dipelajari <span class="text-red-400">*</span>
+
+          <label
+            class="block text-xs font-semibold uppercase
+            tracking-wider text-slate-300 mb-2"
+          >
+            Harapan atau Topik AI yang Ingin Dipelajari
+            <span class="text-red-400">*</span>
           </label>
-          <textarea id="harapan" rows="3" required
-            placeholder="Contoh: Ingin belajar cara pakai Gemini untuk review jurnal skripsi, efisiensi waktu kuliah sambil kerja, atau persiapan karir..."
-            class="input-navy w-full rounded-xl px-4 py-3 text-sm"></textarea>
+
+          <textarea
+            id="harapan"
+            rows="3"
+            required
+            placeholder="Contoh: Ingin belajar cara pakai Gemini untuk review jurnal skripsi, efisiensi waktu kuliah sambil kerja, atau persiapan karier..."
+            class="input-navy w-full rounded-xl px-4 py-3 text-sm"
+          ></textarea>
+
         </div>
 
-        <!-- Submit Button -->
-        <button type="submit" id="submitBtn"
-          class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-blue-600/30 transition transform active:scale-[0.99]">
+
+
+        <!-- TOMBOL SUBMIT -->
+
+        <button
+          type="submit"
+          id="submitBtn"
+          class="w-full py-3.5 px-6 rounded-xl
+          bg-gradient-to-r from-blue-600 to-indigo-600
+          hover:from-blue-500 hover:to-indigo-500
+          text-white font-bold text-sm shadow-lg
+          shadow-blue-600/30 transition
+          transform active:scale-[0.99]"
+        >
           Kirim Pendaftaran Sekarang
         </button>
+
       </form>
+
     </div>
 
-    <!-- TIKET BUKTI PENDAFTARAN (Muncul Setelah Submit) -->
-    <div id="ticketContainer" class="hidden glass-card rounded-2xl p-6 md:p-8 shadow-2xl border border-emerald-500/40 text-center">
-      <div class="w-14 h-14 rounded-full bg-emerald-500/20 border border-emerald-400 text-emerald-400 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+
+
+    <!-- =====================================================
+         TIKET BUKTI PENDAFTARAN
+    ====================================================== -->
+
+    <div
+      id="ticketContainer"
+      class="hidden glass-card rounded-2xl p-6 md:p-8
+      shadow-2xl border border-emerald-500/40 text-center"
+    >
+
+
+      <!-- Icon Berhasil -->
+
+      <div
+        class="w-14 h-14 rounded-full
+        bg-emerald-500/20 border border-emerald-400
+        text-emerald-400 flex items-center justify-center
+        mx-auto mb-4 text-2xl font-bold"
+      >
         ✓
       </div>
-      <h2 class="text-2xl font-extrabold text-white mb-1">Pendaftaran Berhasil!</h2>
-      <p class="text-xs text-slate-300 mb-6">Simpan atau screenshot bukti registrasi ini untuk ditunjukkan saat registrasi ulang.</p>
 
-      <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-5 text-left space-y-2.5 max-w-md mx-auto mb-6 text-sm">
-        <div class="flex justify-between border-b border-slate-800 pb-2">
-          <span class="text-slate-400">ID Tiket:</span>
-          <span id="tId" class="font-mono font-bold text-blue-400"></span>
+
+      <h2 class="text-2xl font-extrabold text-white mb-1">
+        Pendaftaran Berhasil!
+      </h2>
+
+      <p class="text-xs text-slate-300 mb-6">
+        Simpan atau screenshot bukti registrasi ini untuk
+        ditunjukkan saat registrasi ulang.
+      </p>
+
+
+      <!-- Detail Tiket -->
+
+      <div
+        class="bg-slate-900/90 border border-slate-800
+        rounded-xl p-5 text-left space-y-2.5
+        max-w-md mx-auto mb-6 text-sm"
+      >
+
+        <div
+          class="flex justify-between border-b
+          border-slate-800 pb-2"
+        >
+          <span class="text-slate-400">
+            ID Tiket:
+          </span>
+
+          <span
+            id="tId"
+            class="font-mono font-bold text-blue-400"
+          ></span>
         </div>
+
+
         <div class="flex justify-between">
-          <span class="text-slate-400">Nama Peserta:</span>
-          <span id="tNama" class="font-semibold text-white text-right"></span>
+
+          <span class="text-slate-400">
+            Nama Peserta:
+          </span>
+
+          <span
+            id="tNama"
+            class="font-semibold text-white text-right"
+          ></span>
+
         </div>
+
+
         <div class="flex justify-between">
-          <span class="text-slate-400">NIM / Prodi:</span>
-          <span id="tProdi" class="text-slate-200 text-right"></span>
+
+          <span class="text-slate-400">
+            NIM / Prodi:
+          </span>
+
+          <span
+            id="tProdi"
+            class="text-slate-200 text-right"
+          ></span>
+
         </div>
+
+
         <div class="flex justify-between">
-          <span class="text-slate-400">Semester:</span>
-          <span id="tSemester" class="text-slate-200"></span>
+
+          <span class="text-slate-400">
+            Semester:
+          </span>
+
+          <span
+            id="tSemester"
+            class="text-slate-200"
+          ></span>
+
         </div>
+
+
         <div class="flex justify-between">
-          <span class="text-slate-400">Waktu Daftar:</span>
-          <span id="tWaktu" class="text-xs text-slate-400"></span>
+
+          <span class="text-slate-400">
+            Waktu Daftar:
+          </span>
+
+          <span
+            id="tWaktu"
+            class="text-xs text-slate-400"
+          ></span>
+
         </div>
+
       </div>
 
-      <button onclick="resetForm()" class="text-xs text-blue-400 hover:underline font-medium">
+
+      <!-- Tombol Daftar Lagi -->
+
+      <button
+        onclick="resetForm()"
+        class="text-xs text-blue-400
+        hover:underline font-medium"
+      >
         ← Daftarkan peserta lain
       </button>
+
     </div>
 
-    <!-- MODAL / PANEL ADMIN ORGANIZER -->
-    <div id="adminPanel" class="hidden mt-8 glass-card rounded-2xl p-6 md:p-8 border border-blue-500/40">
-      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-6">
+
+
+    <!-- =====================================================
+         PANEL ADMIN
+    ====================================================== -->
+
+    <div
+      id="adminPanel"
+      class="hidden mt-8 glass-card rounded-2xl
+      p-6 md:p-8 border border-blue-500/40"
+    >
+
+
+      <!-- Header Admin -->
+
+      <div
+        class="flex flex-wrap items-center justify-between
+        gap-4 border-b border-slate-800 pb-4 mb-6"
+      >
+
         <div>
-          <h3 class="text-lg font-bold text-white">Dashboard Data Pendaftar (Mode Lokal / Preview)</h3>
-          <p class="text-xs text-slate-400">Total Peserta Terdaftar di Perangkat Ini: <strong id="totalCount" class="text-blue-400">0</strong></p>
+
+          <h3 class="text-lg font-bold text-white">
+            Dashboard Data Pendaftar
+          </h3>
+
+          <p class="text-xs text-slate-400">
+
+            Total Peserta Terdaftar di Perangkat Ini:
+
+            <strong
+              id="totalCount"
+              class="text-blue-400"
+            >
+              0
+            </strong>
+
+          </p>
+
         </div>
+
+
+        <!-- Tombol Admin -->
+
         <div class="flex gap-2">
-          <button onclick="exportCSV()" class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition">
+
+          <button
+            onclick="exportCSV()"
+            class="px-4 py-2 rounded-lg
+            bg-emerald-600 hover:bg-emerald-500
+            text-white text-xs font-bold transition"
+          >
             Unduh Excel (.CSV)
           </button>
-          <button onclick="closeAdmin()" class="px-3 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium">
+
+          <button
+            onclick="closeAdmin()"
+            class="px-3 py-2 rounded-lg
+            bg-slate-800 hover:bg-slate-700
+            text-slate-300 text-xs font-medium"
+          >
             Tutup
           </button>
+
         </div>
+
       </div>
 
-      <!-- Tabel Data -->
+
+
+      <!-- TABEL DATA -->
+
       <div class="overflow-x-auto">
-        <table class="w-full text-left border-collapse text-xs">
+
+        <table
+          class="w-full text-left border-collapse text-xs"
+        >
+
           <thead>
-            <tr class="border-b border-slate-800 text-slate-400 uppercase">
+
+            <tr
+              class="border-b border-slate-800
+              text-slate-400 uppercase"
+            >
+
               <th class="py-3 px-2">ID</th>
               <th class="py-3 px-2">Nama</th>
               <th class="py-3 px-2">NIK</th>
@@ -267,155 +1141,630 @@
               <th class="py-3 px-2">Prodi & Sem</th>
               <th class="py-3 px-2">WhatsApp</th>
               <th class="py-3 px-2">Waktu</th>
+
             </tr>
+
           </thead>
-          <tbody id="adminTableBody" class="divide-y divide-slate-800/60 text-slate-200"></tbody>
+
+
+          <tbody
+            id="adminTableBody"
+            class="divide-y divide-slate-800/60 text-slate-200"
+          >
+          </tbody>
+
         </table>
+
       </div>
+
     </div>
+
 
   </main>
 
-  <!-- Footer & Tombol Admin -->
-  <footer class="border-t border-slate-900 py-6 text-center text-xs text-slate-500">
-    <p>Diselenggarakan oleh Google Student Ambassador 2026 Batch 2 • Universitas Mercu Buana</p>
-    <button onclick="openAdminPrompt()" class="mt-2 text-slate-600 hover:text-blue-400 transition">
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer
+    class="border-t border-slate-900 py-6
+    text-center text-xs text-slate-500"
+  >
+
+    <p>
+      Diselenggarakan oleh Google Student Ambassador 2026 Batch 2
+      • Universitas Mercu Buana
+    </p>
+
+    <button
+      onclick="openAdminPrompt()"
+      class="mt-2 text-slate-600
+      hover:text-blue-400 transition"
+    >
       🔒 Akses Organizer (PIN)
     </button>
+
   </footer>
 
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
   <script>
-    // =========================================================================
-    // TEMPEL URL GOOGLE APPS SCRIPT KAMU DI BAWAH INI AGAR DATA MASuk KE SHEETS PRIBADI
-    // =========================================================================
-    const GOOGLE_SCRIPT_URL = ""; // Contoh: "https://script.google.com/macros/s/AKfycb.../exec"
+
+
+    /* =======================================================
+       KONFIGURASI GOOGLE APPS SCRIPT
+
+       Jika ingin data masuk ke Google Sheets,
+       masukkan URL Google Apps Script di bawah ini.
+
+       Contoh:
+       const GOOGLE_SCRIPT_URL =
+       "https://script.google.com/macros/s/XXXXXXXX/exec";
+    ======================================================== */
+
+    const GOOGLE_SCRIPT_URL = "";
+
+
+    /* PIN ADMIN */
+
     const ADMIN_PIN = "GSA2026";
 
+
+    /* Mengambil elemen formulir */
+
     const form = document.getElementById('registrationForm');
+
     const submitBtn = document.getElementById('submitBtn');
 
+
+
+    /* =======================================================
+       PROSES PENDAFTARAN
+    ======================================================== */
+
     form.addEventListener('submit', async function(e) {
+
       e.preventDefault();
+
+
+      /* Ubah tombol saat data diproses */
+
       submitBtn.disabled = true;
+
       submitBtn.innerText = "Memproses Pendaftaran...";
 
-      const ticketId = "GSA-" + Math.floor(100000 + Math.random() * 900000);
-      const timestamp = new Date().toLocaleString('id-ID');
+
+      /* Membuat ID Tiket */
+
+      const ticketId =
+        "GSA-" +
+        Math.floor(100000 + Math.random() * 900000);
+
+
+      /* Waktu pendaftaran */
+
+      const timestamp =
+        new Date().toLocaleString('id-ID');
+
+
+      /* Data peserta */
 
       const payload = {
+
         id: ticketId,
+
         waktu: timestamp,
-        nama: document.getElementById('nama').value.trim(),
-        nik: "'" + document.getElementById('nik').value.trim(),
-        nim: "'" + document.getElementById('nim').value.trim(),
-        prodi: document.getElementById('prodi').value,
-        semester: document.getElementById('semester').value,
-        email: document.getElementById('email').value.trim(),
-        whatsapp: "'" + document.getElementById('whatsapp').value.trim(),
-        kategori: document.getElementById('kategori').value,
-        pengalaman: document.getElementById('pengalaman').value,
-        harapan: document.getElementById('harapan').value.trim()
+
+        nama:
+          document
+            .getElementById('nama')
+            .value
+            .trim(),
+
+        nik:
+          "'" +
+          document
+            .getElementById('nik')
+            .value
+            .trim(),
+
+        nim:
+          "'" +
+          document
+            .getElementById('nim')
+            .value
+            .trim(),
+
+        prodi:
+          document
+            .getElementById('prodi')
+            .value,
+
+        semester:
+          document
+            .getElementById('semester')
+            .value,
+
+        email:
+          document
+            .getElementById('email')
+            .value
+            .trim(),
+
+        whatsapp:
+          "'" +
+          document
+            .getElementById('whatsapp')
+            .value
+            .trim(),
+
+        kategori:
+          document
+            .getElementById('kategori')
+            .value,
+
+        pengalaman:
+          document
+            .getElementById('pengalaman')
+            .value,
+
+        harapan:
+          document
+            .getElementById('harapan')
+            .value
+            .trim()
+
       };
 
-      // Simpan cadangan di browser lokal untuk pengetesan
-      const localData = JSON.parse(localStorage.getItem('gsa_umb_registrants') || '[]');
-      localData.push(payload);
-      localStorage.setItem('gsa_umb_registrants', JSON.stringify(localData));
 
-      // Jika URL Google Script sudah diisi, kirim ke Google Sheets pribadi kamu
+
+      /* =====================================================
+         SIMPAN DATA DI BROWSER LOKAL
+      ====================================================== */
+
+      const localData =
+        JSON.parse(
+          localStorage.getItem(
+            'gsa_umb_registrants'
+          ) || '[]'
+        );
+
+
+      localData.push(payload);
+
+
+      localStorage.setItem(
+        'gsa_umb_registrants',
+        JSON.stringify(localData)
+      );
+
+
+
+      /* =====================================================
+         KIRIM DATA KE GOOGLE SHEETS
+
+         Hanya berjalan jika URL sudah diisi.
+      ====================================================== */
+
       if (GOOGLE_SCRIPT_URL !== "") {
+
         try {
-          await fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-        } catch (err) {
-          console.error("Gagal kirim ke cloud:", err);
+
+          await fetch(
+            GOOGLE_SCRIPT_URL,
+            {
+
+              method: 'POST',
+
+              mode: 'no-cors',
+
+              headers: {
+                'Content-Type': 'application/json'
+              },
+
+              body:
+                JSON.stringify(payload)
+
+            }
+          );
+
         }
+
+        catch (err) {
+
+          console.error(
+            "Gagal mengirim data ke cloud:",
+            err
+          );
+
+        }
+
       }
 
-      // Tampilkan Tiket Peserta
-      document.getElementById('tId').innerText = payload.id;
-      document.getElementById('tNama').innerText = payload.nama;
-      document.getElementById('tProdi').innerText = payload.nim.replace("'", "") + " / " + payload.prodi;
-      document.getElementById('tSemester').innerText = payload.semester;
-      document.getElementById('tWaktu').innerText = payload.waktu;
 
-      document.getElementById('formContainer').classList.add('hidden');
-      document.getElementById('ticketContainer').classList.remove('hidden');
+
+      /* =====================================================
+         TAMPILKAN TIKET PESERTA
+      ====================================================== */
+
+      document
+        .getElementById('tId')
+        .innerText = payload.id;
+
+
+      document
+        .getElementById('tNama')
+        .innerText = payload.nama;
+
+
+      document
+        .getElementById('tProdi')
+        .innerText =
+          payload.nim.replace("'", "") +
+          " / " +
+          payload.prodi;
+
+
+      document
+        .getElementById('tSemester')
+        .innerText = payload.semester;
+
+
+      document
+        .getElementById('tWaktu')
+        .innerText = payload.waktu;
+
+
+
+      /* Sembunyikan form */
+
+      document
+        .getElementById('formContainer')
+        .classList.add('hidden');
+
+
+      /* Tampilkan tiket */
+
+      document
+        .getElementById('ticketContainer')
+        .classList.remove('hidden');
+
+
+      /* Reset tombol */
 
       submitBtn.disabled = false;
-      submitBtn.innerText = "Kirim Pendaftaran Sekarang";
+
+      submitBtn.innerText =
+        "Kirim Pendaftaran Sekarang";
+
+
+      /* Reset formulir */
+
       form.reset();
+
     });
 
+
+
+    /* =======================================================
+       DAFTAR PESERTA LAIN
+    ======================================================== */
+
     function resetForm() {
-      document.getElementById('ticketContainer').classList.add('hidden');
-      document.getElementById('formContainer').classList.remove('hidden');
+
+      document
+        .getElementById('ticketContainer')
+        .classList.add('hidden');
+
+
+      document
+        .getElementById('formContainer')
+        .classList.remove('hidden');
+
     }
 
-    // Fitur Portal Admin (PIN: GSA2026)
+
+
+    /* =======================================================
+       PANEL ADMIN
+    ======================================================== */
+
     function openAdminPrompt() {
-      const pin = prompt("Masukkan PIN Organizer GSA:");
+
+      const pin =
+        prompt(
+          "Masukkan PIN Organizer GSA:"
+        );
+
+
       if (pin === ADMIN_PIN) {
+
         renderAdminTable();
-        document.getElementById('adminPanel').classList.remove('hidden');
-        document.getElementById('adminPanel').scrollIntoView({ behavior: 'smooth' });
-      } else if (pin !== null) {
-        alert("PIN salah! Data hanya dapat diakses oleh Organizer.");
+
+
+        document
+          .getElementById('adminPanel')
+          .classList.remove('hidden');
+
+
+        document
+          .getElementById('adminPanel')
+          .scrollIntoView({
+            behavior: 'smooth'
+          });
+
       }
+
+      else if (pin !== null) {
+
+        alert(
+          "PIN salah! Data hanya dapat diakses oleh Organizer."
+        );
+
+      }
+
     }
+
+
+
+    /* Menutup panel admin */
 
     function closeAdmin() {
-      document.getElementById('adminPanel').classList.add('hidden');
+
+      document
+        .getElementById('adminPanel')
+        .classList.add('hidden');
+
     }
+
+
+
+    /* =======================================================
+       MENAMPILKAN DATA PESERTA
+    ======================================================== */
 
     function renderAdminTable() {
-      const data = JSON.parse(localStorage.getItem('gsa_umb_registrants') || '[]');
-      document.getElementById('totalCount').innerText = data.length;
-      const tbody = document.getElementById('adminTableBody');
+
+      const data =
+        JSON.parse(
+          localStorage.getItem(
+            'gsa_umb_registrants'
+          ) || '[]'
+        );
+
+
+      document
+        .getElementById('totalCount')
+        .innerText = data.length;
+
+
+      const tbody =
+        document.getElementById(
+          'adminTableBody'
+        );
+
+
       tbody.innerHTML = "";
 
+
+      /* Jika belum ada peserta */
+
       if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="py-4 text-center text-slate-500">Belum ada pendaftar di perangkat ini.</td></tr>`;
+
+        tbody.innerHTML = `
+
+          <tr>
+            <td
+              colspan="7"
+              class="py-4 text-center text-slate-500"
+            >
+              Belum ada pendaftar di perangkat ini.
+            </td>
+          </tr>
+
+        `;
+
         return;
+
       }
 
+
+
+      /* Menampilkan setiap peserta */
+
       data.forEach(item => {
-        const tr = document.createElement('tr');
+
+        const tr =
+          document.createElement('tr');
+
+
         tr.innerHTML = `
-          <td class="py-2.5 px-2 font-mono text-blue-400">${item.id}</td>
-          <td class="py-2.5 px-2 font-semibold">${item.nama}</td>
-          <td class="py-2.5 px-2">${item.nik.replace("'", "")}</td>
-          <td class="py-2.5 px-2">${item.nim.replace("'", "")}</td>
-          <td class="py-2.5 px-2">${item.prodi} (${item.semester})</td>
-          <td class="py-2.5 px-2">${item.whatsapp.replace("'", "")}</td>
-          <td class="py-2.5 px-2 text-slate-400">${item.waktu}</td>
+
+          <td
+            class="py-2.5 px-2
+            font-mono text-blue-400"
+          >
+            ${item.id}
+          </td>
+
+          <td
+            class="py-2.5 px-2
+            font-semibold"
+          >
+            ${item.nama}
+          </td>
+
+          <td class="py-2.5 px-2">
+            ${item.nik.replace("'", "")}
+          </td>
+
+          <td class="py-2.5 px-2">
+            ${item.nim.replace("'", "")}
+          </td>
+
+          <td class="py-2.5 px-2">
+            ${item.prodi}
+            (${item.semester})
+          </td>
+
+          <td class="py-2.5 px-2">
+            ${item.whatsapp.replace("'", "")}
+          </td>
+
+          <td
+            class="py-2.5 px-2
+            text-slate-400"
+          >
+            ${item.waktu}
+          </td>
+
         `;
+
+
         tbody.appendChild(tr);
+
       });
+
     }
+
+
+
+    /* =======================================================
+       EXPORT DATA KE CSV / EXCEL
+    ======================================================== */
 
     function exportCSV() {
-      const data = JSON.parse(localStorage.getItem('gsa_umb_registrants') || '[]');
-      if (data.length === 0) return alert("Belum ada data untuk diunduh.");
 
-      const headers = ["ID Tiket", "Waktu Daftar", "Nama Lengkap", "NIK", "NIM", "Program Studi", "Semester", "Email", "WhatsApp", "Kategori", "Pengalaman AI", "Harapan"];
-      const rows = data.map(d => [
-        d.id, d.waktu, `"${d.nama}"`, d.nik, d.nim, `"${d.prodi}"`, d.semester, d.email, d.whatsapp, d.kategori, d.pengalaman, `"${d.harapan.replace(/"/g, '""')}"`
-      ]);
+      const data =
+        JSON.parse(
+          localStorage.getItem(
+            'gsa_umb_registrants'
+          ) || '[]'
+        );
 
-      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(e => e.join(","))].join("\n");
-      const encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", `Data_Peserta_GSA_UMB_${new Date().toISOString().slice(0,10)}.csv`);
-      document.body.appendChild(link);
+
+      /* Cek data */
+
+      if (data.length === 0) {
+
+        return alert(
+          "Belum ada data untuk diunduh."
+        );
+
+      }
+
+
+
+      /* Header CSV */
+
+      const headers = [
+
+        "ID Tiket",
+        "Waktu Daftar",
+        "Nama Lengkap",
+        "NIK",
+        "NIM",
+        "Program Studi",
+        "Semester",
+        "Email",
+        "WhatsApp",
+        "Kategori",
+        "Pengalaman AI",
+        "Harapan"
+
+      ];
+
+
+
+      /* Data CSV */
+
+      const rows =
+        data.map(d => [
+
+          d.id,
+
+          d.waktu,
+
+          `"${d.nama}"`,
+
+          d.nik,
+
+          d.nim,
+
+          `"${d.prodi}"`,
+
+          d.semester,
+
+          d.email,
+
+          d.whatsapp,
+
+          d.kategori,
+
+          d.pengalaman,
+
+          `"${d.harapan.replace(/"/g, '""')}"`
+
+        ]);
+
+
+
+      /* Membuat file CSV */
+
+      const csvContent =
+        "data:text/csv;charset=utf-8," +
+        [
+          headers.join(","),
+          ...rows.map(e => e.join(","))
+        ].join("\n");
+
+
+      const encodedUri =
+        encodeURI(csvContent);
+
+
+      const link =
+        document.createElement("a");
+
+
+      link.setAttribute(
+        "href",
+        encodedUri
+      );
+
+
+      link.setAttribute(
+        "download",
+        `Data_Peserta_GSA_UMB_${
+          new Date()
+            .toISOString()
+            .slice(0, 10)
+        }.csv`
+      );
+
+
+      document
+        .body
+        .appendChild(link);
+
+
       link.click();
-      document.body.removeChild(link);
+
+
+      document
+        .body
+        .removeChild(link);
+
     }
+
+
   </script>
+
 </body>
 </html>
